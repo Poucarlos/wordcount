@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Count Page</h1>
+	<a href="{% url 'home' %}">Again??</a>
+	<h2>in the sentence: <br/>{{fulltext}}</h2>
+	<h2>There are in total : <br/>{{count}}</h2>
+	<h3>Word count: </h3>
+	{% for word,counttotal in sorted %}
+	   {{word}}-{{counttotal}}
+	   <br/>
+	{% endfor %}
+
+</body>
+</html>
